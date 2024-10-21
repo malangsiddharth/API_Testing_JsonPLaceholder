@@ -8,6 +8,8 @@ This project automates the validation of users from the FanCode city to ensure t
 1. Clone the repository.
    ```bash
    git clone https://github.com/malangsiddharth/API_Testing_JsonPLaceholder/tree/API_Testing_JsonPLaceholder
-   cd project-root
+2.Run command to see report
+  behave --no-capture -f allure_behave.formatter:AllureFormatter -o AllureReports
+
 
 
