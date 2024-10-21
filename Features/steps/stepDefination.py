@@ -2,6 +2,8 @@ from behave import *
 import requests
 from utilities.resources import *
 from utilities.configuration import *
+import logging
+
 
 
 @given(u'User has the todo tasks')
@@ -27,9 +29,9 @@ def verifytodotasks(context):
                 user_count += 1
 
     if user_count == len(list_todos):
-        print("All Users has todo list are same")
+        logging.info("All Users has todo list are same")
     else:
-        print((len(list_todos)-user_count),":---user missing todo list")
+        logging.info((len(list_todos)-user_count),":---user missing todo list")
 
 
 @given(u'User belongs to the city FanCode')
@@ -40,15 +42,15 @@ def step_impl(context):
         context.lng_value = context.userslist.json()[i]['address']["geo"]["lng"]
 
         if (-40 < float(context.lat_value) < 5) and (5 < float(context.lng_value) < 100):
-            print("Fancode User:----", context.userslist.json()[i]['id'])
+            logging.info("Fancode User:----", context.userslist.json()[i]['id'])
             context.fancode_users_list.append(context.userslist.json()[i]['id'])
         else:
-            print("Not fancode users for user:----", context.userslist.json()[i]['id'])
+            logging.info("Not fancode users for user:----", context.userslist.json()[i]['id'])
 
 
 @then(u'User Completed task percentage should be greater than 50%')
 def step_impl(context):
-    print("Fancode users list:----",context.fancode_users_list)
+    logging.info("Fancode users list:----",context.fancode_users_list)
     for i in range(len(context.fancode_users_list)):
             context.users_task = requests.get("https://jsonplaceholder.typicode.com/todos",
                                           params={"userId": str(context.fancode_users_list[i])})
@@ -58,8 +60,8 @@ def step_impl(context):
             for j in range(len(users_task_response)):
                 if users_task_response[j]["completed"] == True:
                     count_task_completed += 1
-            print(context.fancode_users_list[i])
+            logging.info(context.fancode_users_list[i])
             if ((count_task_completed / len(users_task_response)) * 100) > 50:
-                print("Fancode user {} completed the task with percentage {}".format(context.fancode_users_list[i],(count_task_completed / len(users_task_response)) * 100))
+                logging.info("Fancode user {} completed the task with percentage {}".format(context.fancode_users_list[i],(count_task_completed / len(users_task_response)) * 100))
             else:
-                print("Fancode user {} not completed the task, user managed to completed {} task".format(context.fancode_users_list[i],(count_task_completed / len(users_task_response)) * 100))
+                logging.info("Fancode user {} not completed the task, user managed to completed {} task".format(context.fancode_users_list[i],(count_task_completed / len(users_task_response)) * 100))
