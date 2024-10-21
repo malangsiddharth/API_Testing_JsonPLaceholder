@@ -1,0 +1,45 @@
+Started by user sidmalang
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\API_Testing_JsonPLaceholder
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\API_Testing_JsonPLaceholder\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/malangsiddharth/API_Testing_JsonPLaceholder.git # timeout=10
+Fetching upstream changes from https://github.com/malangsiddharth/API_Testing_JsonPLaceholder.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.45.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/malangsiddharth/API_Testing_JsonPLaceholder.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/API_Testing_JsonPLaceholder^{commit}" # timeout=10
+Checking out Revision 99c01c63c7457726e911d6e0c49c81b9d70ed7f8 (refs/remotes/origin/API_Testing_JsonPLaceholder)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 99c01c63c7457726e911d6e0c49c81b9d70ed7f8 # timeout=10
+Commit message: "API Testing API_Testing_JsonPLaceholder stepdefination"
+ > git.exe rev-list --no-walk 0eef16c994b8b6a7bb78fb8daea14c11146c8e92 # timeout=10
+[API_Testing_JsonPLaceholder] $ cmd.exe /c call C:\WINDOWS\TEMP\shiningpanda17516157510438478840.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\API_Testing_JsonPLaceholder>python -m venv env 
+
+C:\ProgramData\Jenkins\.jenkins\workspace\API_Testing_JsonPLaceholder>call ./env/Scripts/activate.bat 
+Requirement already satisfied: allure-behave==2.13.5 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 1)) (2.13.5)
+Requirement already satisfied: allure-python-commons==2.13.5 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 2)) (2.13.5)
+Requirement already satisfied: attrs==24.2.0 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 3)) (24.2.0)
+Requirement already satisfied: behave==1.2.6 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 4)) (1.2.6)
+Requirement already satisfied: behave-classy==1.0.0 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 5)) (1.0.0)
+Requirement already satisfied: certifi==2024.8.30 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 6)) (2024.8.30)
+Requirement already satisfied: charset-normalizer==3.4.0 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 7)) (3.4.0)
+Requirement already satisfied: idna==3.10 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 8)) (3.10)
+Requirement already satisfied: parse==1.20.2 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 9)) (1.20.2)
+Requirement already satisfied: parse_type==0.6.4 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 10)) (0.6.4)
+Requirement already satisfied: pluggy==1.5.0 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 11)) (1.5.0)
+Requirement already satisfied: requests==2.32.3 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 12)) (2.32.3)
+Requirement already satisfied: six==1.16.0 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 13)) (1.16.0)
+Requirement already satisfied: urllib3==2.2.3 in c:\programdata\jenkins\.jenkins\workspace\api_testing_jsonplaceholder\env\lib\site-packages (from -r requirements.txt (line 14)) (2.2.3)
+
+[notice] A new release of pip available: 22.3.1 -> 24.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m3.105s
+Finished: SUCCESS
